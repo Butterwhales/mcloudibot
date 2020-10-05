@@ -23,7 +23,7 @@ client.on('connected', onConnectedHandler);
 client.connect();
 
 // Called every time a message comes in
-function onMessageHandler(target, context, msg, self) {
+function onMessageHandler (target, context, msg, self) {
   if (self) { return; } // Ignore messages from the bot
 
   // Remove whitespace from chat message
@@ -31,10 +31,50 @@ function onMessageHandler(target, context, msg, self) {
 
   // If the command is known, let's execute it
   switch (commandName) {
-    case '!size':
+    case '!size':  
     case '!dicksize': // Sizes up Chris'! Magnum Dong (Or not)
-      let num = dickRand();
-      client.say(target, `Mcloudi has a ${num}in cock`);
+      var num = dickRand();
+      switch(true){
+        case num <= 1:
+           client.say(target, `Mcloudi has a microscopic ${num} inch weiner`);
+          break;
+        case num <= 2:  
+          client.say(target, `Mcloudi has a tiny ${num} inch weiner`);
+          break;
+        case num <= 4:  
+          client.say(target, `Mcloudi has a small ${num} inch weiner`);
+          break;
+        case num <= 6:  
+          client.say(target, `Mcloudi has an average ${num} inch dick`);
+          break;
+        case num <= 8:
+          client.say(target, `Mcloudi has a sizeable ${num} inch dick`);
+          break;
+        case num <= 10:  
+          client.say(target, `Mcloudi has a hefty ${num} inch cock`);
+          break;
+        case num <= 15:
+          client.say(target, `Mcloudi has a giant ${num} inch cock`);
+          break;
+        case num <= 20:  
+          client.say(target, `Mcloudi has a huge ${num} inch cock`);
+          break;
+        case num <= 30:  
+          client.say(target, `Mcloudi has an enormous ${num} inch cock`);
+          break;
+        case num <= 38:  
+          client.say(target, `Mcloudi has a massive ${num} inch dong`);
+          break;
+        case num = 39:  
+          client.say(target, `Mcloudi has a colossal ${num} inch schlong`);
+          break;
+        case num = 40:  
+          client.say(target, `Mcloudi is packing a monstrous ${num} inch Schlong`);
+          break;
+        default:
+          console.log(`* Executed default ${commandName} command num = ${num}`);
+          break;
+      }
       console.log(`* Executed ${commandName} command`);
       break;
     case '!dab': // Dabs the specified amount of times
@@ -42,7 +82,7 @@ function onMessageHandler(target, context, msg, self) {
       var dabs = (``);
       var i;
       for (i = 0; i < num1; i++) {
-        dabs += 'mcloud2Dab ';
+      dabs += 'mcloud2Dab ';
       }
       client.say(target, dabs);
       console.log(`* Executed ${commandName} command`);
@@ -56,7 +96,7 @@ function onMessageHandler(target, context, msg, self) {
     case '!help'://Automatically sends you to the !commands output
     case '!commands': // Informs the issuer of *most* possible commands with the bot
       /*
-      List of all possible commands with the bot
+      List of all possible commands with the bot (Including those not shown with the !help command )
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
       */
       client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about`);
@@ -67,70 +107,70 @@ function onMessageHandler(target, context, msg, self) {
       console.log(`* Executed ${commandName} command`);
       break;
     case '!wap': // Grabs a bucket and a mop! What'd you think it'd do?
-      switch (randomNum(6)) {
+      switch(randomNum(6)){
         case 1:
-          client.say(target, `Get a bucket and a mop!`);
+            client.say(target, `Get a bucket and a mop!`);
           break;
         case 2:
-          client.say(target, `Put on your life jacket because we're going swimming!`);
+            client.say(target, `Put on your life jacket because we're going swimming!`);
           break;
         case 3:
-          client.say(target, `Warning: slippery when wet!`);
+            client.say(target, `Warning: slippery when wet!`);
           break;
         case 4:
-          client.say(target, `Don't forget your snorkel!`);
+             client.say(target, `Don't forget your snorkel!`);
           break;
         case 5:
-          client.say(target, `This pool is always open!`);
+             client.say(target, `This pool is always open!`);
           break;
         case 6:
-          client.say(target, `moist`);
+             client.say(target, `moist`);
           break;
         default:
-          console.log(`* Executed default ${commandName} command`);
+            console.log(`* Executed default ${commandName} command`);
           break;
       }
-
+      
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!subscribe'://Automatically sends you to the !sub output
+    case '!subscribe'://Automatically sends you to the !sub output (See Below)
     case '!sub': // Generates a link to the subscribe button
       client.say(target, `https://subs.twitch.tv/mcloudi`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!f': // The bot pays it's repsects
+    case '!f': // The bot pays it's respects
       client.say(target, `f`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!window':  //Automatically sends you to the !windows output
-    case '!activate': //Automatically sends you to the !windows output
+    case '!window':  //Automatically sends you to the !windows output (See Below)
+    case '!activate': //Automatically sends you to the !windows output (See Below)
     case '!windows': // Reminds Chris he needs to activate windows
       client.say(target, `Activate Windows`);
       console.log(`* Executed ${commandName} command`);
       break
     case '!about': // Gives information about the bot and thanks the creators
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
-      console.log('* Exectued ${commandName} command');
+      console.log(`* Exectued ${commandName} command`);
     default:
       console.log(`* Unknown command ${commandName}`);
       break;
   }
 }
 
-function dickRand() {
+function dickRand () {
   const max = 40;
   const min = 1;
-
+  
   return Math.floor(Math.abs(Math.random() - Math.random()) * (1 + max - min) + min);
 }
 
-function randomNum(outOf) {
-
+function randomNum (outOf){
+  
   return Math.floor(Math.random() * outOf) + 1;
 }
 
 // Called every time the bot connects to Twitch chat
-function onConnectedHandler(addr, port) {
+function onConnectedHandler (addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
   //client.say(target, `McloudiBot is here`);
 }
