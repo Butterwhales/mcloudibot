@@ -32,7 +32,7 @@ function onMessageHandler (target, context, msg, self) {
   // If the command is known, let's execute it
   switch (commandName) {
     case '!dicksize':
-      let num = rollDice();
+      let num = dickRand();
       client.say(target, `Mcloudi has a ${num}in cock`);
       console.log(`* Executed ${commandName} command`);
       break;
@@ -93,7 +93,7 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
-function rollDice () {
+function dickRand () {
   const max = 40;
   const min = 1;
   
