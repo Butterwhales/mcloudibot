@@ -31,6 +31,7 @@ function onMessageHandler(target, context, msg, self) {
 
   // If the command is known, let's execute it
   switch (commandName) {
+    case '!size':
     case '!dicksize': // Sizes up Chris'! Magnum Dong (Or not)
       let num = dickRand();
       client.say(target, `Mcloudi has a ${num}in cock`);
