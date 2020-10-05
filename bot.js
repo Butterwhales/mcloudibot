@@ -37,10 +37,10 @@ function onMessageHandler (target, context, msg, self) {
       console.log(`* Executed ${commandName} command`);
       break;
     case '!dab':
-      num = randomNum();
+      let num1 = randomNum();
       var dabs = (``);
       var i;
-      for (i = 0; i < num; i++) {
+      for (i = 0; i < num1; i++) {
       dabs += 'mcloud2Dab ';
       }
       client.say(target, dabs);
