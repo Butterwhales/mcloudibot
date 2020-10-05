@@ -23,7 +23,7 @@ client.on('connected', onConnectedHandler);
 client.connect();
 
 // Called every time a message comes in
-function onMessageHandler (target, context, msg, self) {
+function onMessageHandler(target, context, msg, self) {
   if (self) { return; } // Ignore messages from the bot
 
   // Remove whitespace from chat message
@@ -31,6 +31,7 @@ function onMessageHandler (target, context, msg, self) {
 
   // If the command is known, let's execute it
   switch (commandName) {
+    case '!size':
     case '!dicksize':
       let num = dickRand();
       client.say(target, `Mcloudi has a ${num}in cock`);
@@ -41,7 +42,7 @@ function onMessageHandler (target, context, msg, self) {
       var dabs = (``);
       var i;
       for (i = 0; i < num1; i++) {
-      dabs += 'mcloud2Dab ';
+        dabs += 'mcloud2Dab ';
       }
       client.say(target, dabs);
       console.log(`* Executed ${commandName} command`);
@@ -78,8 +79,8 @@ function onMessageHandler (target, context, msg, self) {
       client.say(target, `f`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!window':  
-    case '!activate':  
+    case '!window':
+    case '!activate':
     case '!windows':
       client.say(target, `Activate Windows`);
       console.log(`* Executed ${commandName} command`);
@@ -93,20 +94,20 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
-function dickRand () {
+function dickRand() {
   const max = 40;
   const min = 1;
-  
+
   return Math.floor(Math.abs(Math.random() - Math.random()) * (1 + max - min) + min);
 }
 
-function randomNum (){
+function randomNum() {
   const outOf = 10;
   return Math.floor(Math.random() * outOf) + 1;
 }
 
 // Called every time the bot connects to Twitch chat
-function onConnectedHandler (addr, port) {
+function onConnectedHandler(addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
   //client.say(target, `McloudiBot is here`);
 }
