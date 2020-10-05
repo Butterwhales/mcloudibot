@@ -1,0 +1,2 @@
+# mcloudibot
+A twitch bot
