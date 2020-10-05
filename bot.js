@@ -31,14 +31,13 @@ function onMessageHandler(target, context, msg, self) {
 
   // If the command is known, let's execute it
   switch (commandName) {
-    case '!size':
-    case '!dicksize':
+    case '!dicksize': // Sizes up Chris'! Magnum Dong (Or not)
       let num = dickRand();
       client.say(target, `Mcloudi has a ${num}in cock`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!dab':
-      let num1 = randomNum();
+    case '!dab': // Dabs the specified amount of times
+      let num1 = randomNum(10);
       var dabs = (``);
       var i;
       for (i = 0; i < num1; i++) {
@@ -49,12 +48,12 @@ function onMessageHandler(target, context, msg, self) {
       break;
     case '!prime'://Automatically sends you to the command below 
     case '!twitchprime'://Automatically sends you to the command below 
-    case '!tp':
+    case '!tp': // Asks if any Twitch Primers are chillin'
       client.say(target, `Any Primers in the chat?`);
       console.log(`* Executed ${commandName} command`);
       break;
     case '!help'://Automatically sends you to the !commands output
-    case '!commands':
+    case '!commands': // Informs the issuer of *most* possible commands with the bot
       /*
       List of all possible commands with the bot
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
@@ -62,32 +61,55 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!discord':
+    case '!discord': // Sends a link to the public stream discord
       client.say(target, `https://discord.gg/mTwYJYV`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!wap':
-      client.say(target, `Get a bucket and a mop`);
+    case '!wap': // Grabs a bucket and a mop! What'd you think it'd do?
+      switch (randomNum(6)) {
+        case 1:
+          client.say(target, `Get a bucket and a mop!`);
+          break;
+        case 2:
+          client.say(target, `Put on your life jacket because we're going swimming!`);
+          break;
+        case 3:
+          client.say(target, `Warning: slippery when wet!`);
+          break;
+        case 4:
+          client.say(target, `Don't forget your snorkel!`);
+          break;
+        case 5:
+          client.say(target, `This pool is always open!`);
+          break;
+        case 6:
+          client.say(target, `moist`);
+          break;
+        default:
+          console.log(`* Executed default ${commandName} command`);
+          break;
+      }
+
       console.log(`* Executed ${commandName} command`);
       break;
     case '!subscribe'://Automatically sends you to the !sub output
-    case '!sub':
+    case '!sub': // Generates a link to the subscribe button
       client.say(target, `https://subs.twitch.tv/mcloudi`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!f':
+    case '!f': // The bot pays it's repsects
       client.say(target, `f`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!window':
-    case '!activate':
-    case '!windows':
+    case '!window':  //Automatically sends you to the !windows output
+    case '!activate': //Automatically sends you to the !windows output
+    case '!windows': // Reminds Chris he needs to activate windows
       client.say(target, `Activate Windows`);
       console.log(`* Executed ${commandName} command`);
       break
-    case '!about':
-      client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for making this happen!')
-      console.log('* Exectued $(commandName)')
+    case '!about': // Gives information about the bot and thanks the creators
+      client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
+      console.log('* Exectued ${commandName} command');
     default:
       console.log(`* Unknown command ${commandName}`);
       break;
@@ -101,8 +123,8 @@ function dickRand() {
   return Math.floor(Math.abs(Math.random() - Math.random()) * (1 + max - min) + min);
 }
 
-function randomNum() {
-  const outOf = 10;
+function randomNum(outOf) {
+
   return Math.floor(Math.random() * outOf) + 1;
 }
 
