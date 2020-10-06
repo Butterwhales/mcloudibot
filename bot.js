@@ -19,6 +19,12 @@ const client = new tmi.client(opts);
 client.on('message', onMessageHandler);
 client.on('connected', onConnectedHandler);
 
+// Setting up loop
+let loopInterval = setInterval(function () {
+  console.log('Discord Shoutout');
+  client.say(opts.channels[0], 'Here you can find Mcloudi\'s discord https://discord.gg/mTwYJYV');
+}, 1200000); // 60000ms = 60s = 1min;
+
 // Connect to Twitch:
 client.connect();
 
@@ -37,6 +43,21 @@ function onMessageHandler (target, context, msg, self) {
       var op = ["*", "+", "/", "-"][Math.floor(Math.random()*4)];
       client.say(target, `How much is ${a} ${op} ${b} ? ${context.username}`);
 
+      break;
+    case '!loop':
+      if (loopInterval) { // Check if set
+        console.log('stop loop');
+        client.say(target, 'Loop Ended');
+        clearInterval(loopInterval); // delete Timer
+        loopInterval = false;
+      } else {
+        console.log('start loop');
+        client.say(target, 'Loop Started');
+        loopInterval = setInterval(function () {
+          console.log('Discord Shoutout');
+          client.say(target, 'Here you can find Mcloudi\'s discord https://discord.gg/mTwYJYV');
+        }, 1800000); // 60000ms = 60s = 1min
+      }
       break;
     case '!size':  
     case '!dicksize': // Sizes up Chris'! Magnum Dong (Or not)
@@ -179,5 +200,5 @@ function randomNum (outOf){
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
-  //client.say(target, `McloudiBot is here`);
+  //client.say(opts.channels[0], `McloudiBot is here`);
 }
