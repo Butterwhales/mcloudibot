@@ -24,13 +24,20 @@ client.connect();
 
 // Called every time a message comes in
 function onMessageHandler (target, context, msg, self) {
-  if (self) { return; } // Ignore messages from the bot
+  if (self || !msg.startsWith(prefix)) { return; } // Ignore messages from the bot and messages not starting with the prefix
 
   // Remove whitespace from chat message
   const commandName = msg.trim().toLowerCase();
 
   // If the command is known, let's execute it
   switch (commandName) {
+    case '!ping':
+      var a = Math.floor(Math.random() * 10) + 1;
+      var b = Math.floor(Math.random() * 10) + 1;
+      var op = ["*", "+", "/", "-"][Math.floor(Math.random()*4)];
+      client.say(target, `How much is ${a} ${op} ${b} ? ${context.username}`);
+
+      break;
     case '!size':  
     case '!dicksize': // Sizes up Chris'! Magnum Dong (Or not)
       var num = dickRand();
@@ -88,7 +95,7 @@ function onMessageHandler (target, context, msg, self) {
       console.log(`* Executed ${commandName} command`);
       break;
     case '!prime'://Automatically sends you to the command below 
-    case '!twitchprime'://Automatically sends you to the command below 
+    case '!twitchprime': 
     case '!tp': // Asks if any Twitch Primers are chillin'
       client.say(target, `Any Primers in the chat?`);
       console.log(`* Executed ${commandName} command`);
@@ -133,7 +140,7 @@ function onMessageHandler (target, context, msg, self) {
       
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!subscribe'://Automatically sends you to the !sub output (See Below)
+    case '!subscribe':
     case '!sub': // Generates a link to the subscribe button
       client.say(target, `https://subs.twitch.tv/mcloudi`);
       console.log(`* Executed ${commandName} command`);
@@ -142,8 +149,8 @@ function onMessageHandler (target, context, msg, self) {
       client.say(target, `f`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!window':  //Automatically sends you to the !windows output (See Below)
-    case '!activate': //Automatically sends you to the !windows output (See Below)
+    case '!window':  
+    case '!activate': 
     case '!windows': // Reminds Chris he needs to activate windows
       client.say(target, `Activate Windows`);
       console.log(`* Executed ${commandName} command`);
