@@ -179,6 +179,11 @@ function onMessageHandler (target, context, msg, self) {
     case '!about': // Gives information about the bot and thanks the creators
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
       console.log(`* Exectued ${commandName} command`);
+      break;
+    case '!onlyfans':
+      client.say(target, 'Doesn\'t exist yet but maybe some day.')
+      console.log(`* Exectued ${commandName} command`);
+      break;
     default:
       console.log(`* Unknown command ${commandName}`);
       break;
