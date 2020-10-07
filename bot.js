@@ -42,7 +42,6 @@ function onMessageHandler(target, context, msg, self) {
       var b = Math.floor(Math.random() * 10) + 1;
       var op = ["*", "+", "/", "-"][Math.floor(Math.random() * 4)];
       client.say(target, `How much is ${a} ${op} ${b} ? ${context.username}`);
-
       break;
     case '!loop':
       if (loopInterval) { // Check if set
@@ -180,13 +179,17 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
       console.log(`* Exectued ${commandName} command`);
       break;
+      case '!bttvemotes': // Gives information about the bot and thanks the creators
+      client.say(target, 'The current enabled bttv emotes are 5Head, cloudPet, gachiBass, HYPERS, KKool, monkaW, OMEGALUL, pepeD, Pepega, PepeHands, PepeLaugh, PepePls, Poggers, and weirdChamp.')
+      console.log(`* Exectued ${commandName} command`);
+      break;
     case '!onlyfans':
       switch (randomNum(2)) {
         case 1:
           client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ')
           break;
         case 2:
-          client.say(target, 'You wish LUL.')
+          client.say(target, 'You wish. LUL')
           break;
       }
       console.log(`* Exectued ${commandName} command`);
