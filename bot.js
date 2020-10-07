@@ -22,14 +22,14 @@ client.on('connected', onConnectedHandler);
 // Setting up loop
 let loopInterval = setInterval(function () {
   console.log('Discord Shoutout');
-  client.say(opts.channels[0], 'Here you can find Mcloudi\'s discord https://discord.gg/mTwYJYV');
+  shill();
 }, 1200000); // 60000ms = 60s = 1min;
 
 // Connect to Twitch:
 client.connect();
 
 // Called every time a message comes in
-function onMessageHandler (target, context, msg, self) {
+function onMessageHandler(target, context, msg, self) {
   if (self || !msg.startsWith(prefix)) { return; } // Ignore messages from the bot and messages not starting with the prefix
 
   // Remove whitespace from chat message
@@ -40,7 +40,7 @@ function onMessageHandler (target, context, msg, self) {
     case '!ping':
       var a = Math.floor(Math.random() * 10) + 1;
       var b = Math.floor(Math.random() * 10) + 1;
-      var op = ["*", "+", "/", "-"][Math.floor(Math.random()*4)];
+      var op = ["*", "+", "/", "-"][Math.floor(Math.random() * 4)];
       client.say(target, `How much is ${a} ${op} ${b} ? ${context.username}`);
 
       break;
@@ -55,48 +55,48 @@ function onMessageHandler (target, context, msg, self) {
         client.say(target, 'Loop Started');
         loopInterval = setInterval(function () {
           console.log('Discord Shoutout');
-          client.say(target, 'Here you can find Mcloudi\'s discord https://discord.gg/mTwYJYV');
+          shill();
         }, 1800000); // 60000ms = 60s = 1min
       }
       break;
-    case '!size':  
+    case '!size':
     case '!dicksize': // Sizes up Chris'! Magnum Dong (Or not)
       var num = dickRand();
-      switch(true){
+      switch (true) {
         case num <= 1:
-           client.say(target, `Mcloudi has a microscopic ${num} inch weiner`);
+          client.say(target, `Mcloudi has a microscopic ${num} inch weiner`);
           break;
-        case num <= 2:  
+        case num <= 2:
           client.say(target, `Mcloudi has a tiny ${num} inch weiner`);
           break;
-        case num <= 4:  
+        case num <= 4:
           client.say(target, `Mcloudi has a small ${num} inch weiner`);
           break;
-        case num <= 6:  
+        case num <= 6:
           client.say(target, `Mcloudi has an average ${num} inch dick`);
           break;
         case num <= 8:
           client.say(target, `Mcloudi has a sizeable ${num} inch dick`);
           break;
-        case num <= 10:  
+        case num <= 10:
           client.say(target, `Mcloudi has a hefty ${num} inch cock`);
           break;
         case num <= 15:
           client.say(target, `Mcloudi has a giant ${num} inch cock`);
           break;
-        case num <= 20:  
+        case num <= 20:
           client.say(target, `Mcloudi has a huge ${num} inch cock`);
           break;
-        case num <= 30:  
+        case num <= 30:
           client.say(target, `Mcloudi has an enormous ${num} inch cock`);
           break;
-        case num <= 38:  
+        case num <= 38:
           client.say(target, `Mcloudi has a massive ${num} inch dong`);
           break;
-        case num = 39:  
+        case num = 39:
           client.say(target, `Mcloudi has a colossal ${num} inch schlong`);
           break;
-        case num = 40:  
+        case num = 40:
           client.say(target, `Mcloudi is packing a monstrous ${num} inch Schlong`);
           break;
         default:
@@ -110,13 +110,13 @@ function onMessageHandler (target, context, msg, self) {
       var dabs = (``);
       var i;
       for (i = 0; i < num1; i++) {
-      dabs += 'mcloud2Dab ';
+        dabs += 'mcloud2Dab ';
       }
       client.say(target, dabs);
       console.log(`* Executed ${commandName} command`);
       break;
     case '!prime'://Automatically sends you to the command below 
-    case '!twitchprime': 
+    case '!twitchprime':
     case '!tp': // Asks if any Twitch Primers are chillin'
       client.say(target, `Any Primers in the chat?`);
       console.log(`* Executed ${commandName} command`);
@@ -135,30 +135,30 @@ function onMessageHandler (target, context, msg, self) {
       console.log(`* Executed ${commandName} command`);
       break;
     case '!wap': // Grabs a bucket and a mop! What'd you think it'd do?
-      switch(randomNum(6)){
+      switch (randomNum(6)) {
         case 1:
-            client.say(target, `Get a bucket and a mop!`);
+          client.say(target, `Get a bucket and a mop!`);
           break;
         case 2:
-            client.say(target, `Put on your life jacket because we're going swimming!`);
+          client.say(target, `Put on your life jacket because we're going swimming!`);
           break;
         case 3:
-            client.say(target, `Warning: slippery when wet!`);
+          client.say(target, `Warning: slippery when wet!`);
           break;
         case 4:
-             client.say(target, `Don't forget your snorkel!`);
+          client.say(target, `Don't forget your snorkel!`);
           break;
         case 5:
-             client.say(target, `This pool is always open!`);
+          client.say(target, `This pool is always open!`);
           break;
         case 6:
-             client.say(target, `moist`);
+          client.say(target, `moist`);
           break;
         default:
-            console.log(`* Executed default ${commandName} command`);
+          console.log(`* Executed default ${commandName} command`);
           break;
       }
-      
+
       console.log(`* Executed ${commandName} command`);
       break;
     case '!subscribe':
@@ -170,8 +170,8 @@ function onMessageHandler (target, context, msg, self) {
       client.say(target, `f`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!window':  
-    case '!activate': 
+    case '!window':
+    case '!activate':
     case '!windows': // Reminds Chris he needs to activate windows
       client.say(target, `Activate Windows`);
       console.log(`* Executed ${commandName} command`);
@@ -181,7 +181,14 @@ function onMessageHandler (target, context, msg, self) {
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!onlyfans':
-      client.say(target, 'Doesn\'t exist yet but maybe some day.')
+      switch (randomNum(6)) {
+        case 1:
+          client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ')
+          break;
+        case 2:
+          client.say(target, 'You wish LUL.')
+          break;
+      }
       console.log(`* Exectued ${commandName} command`);
       break;
     default:
@@ -190,20 +197,43 @@ function onMessageHandler (target, context, msg, self) {
   }
 }
 
-function dickRand () {
+function dickRand() {
   const max = 40;
   const min = 1;
-  
+
   return Math.floor(Math.abs(Math.random() - Math.random()) * (1 + max - min) + min);
 }
 
-function randomNum (outOf){
-  
+function randomNum(outOf) {
+
   return Math.floor(Math.random() * outOf) + 1;
 }
 
+function shill() {
+  switch (randomNum(1)) {
+    case 1:
+      client.say(opts.channels[0], 'Here you can find Mcloudi\'s discord https://discord.gg/mTwYJYV');
+      break;
+    //case 2:
+    //client.say(opts.channels[0], 'Don\'t forget about twitch prime. https://subs.twitch.tv/mcloudi ');
+    //break;
+  }
+}
+
 // Called every time the bot connects to Twitch chat
-function onConnectedHandler (addr, port) {
+function onConnectedHandler(addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
   //client.say(opts.channels[0], `McloudiBot is here`);
 }
+
+onSub((channel, user, subInfo, msg) => {
+  client.say(channel, `Thank you for subbing ${user} mcloud2Dab`);
+})
+
+onSubExtend((channel, user, subInfo, msg) => {
+  client.say(channel, `Thank you for subbing ${user} for ${subInfo} mcloud2Dab`);
+})
+
+onSubGift((channel, user, subInfo, msg) => {
+  client.say(channel, `Thank you ${user.gifter} for gifting ${subInfo} subs mcloud2Dab`);
+})
