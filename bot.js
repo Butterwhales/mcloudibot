@@ -179,8 +179,13 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
       console.log(`* Exectued ${commandName} command`);
       break;
-      case '!bttvemotes': // Gives information about the bot and thanks the creators
+    case '!bttvemotes': // Gives information about the bot and thanks the creators
       client.say(target, 'The current enabled bttv emotes are 5Head, cloudPet, gachiBass, HYPERS, KKool, monkaW, OMEGALUL, pepeD, Pepega, PepeHands, PepeLaugh, PepePls, Poggers, and weirdChamp.')
+      console.log(`* Exectued ${commandName} command`);
+      break;
+    case '!thicc':
+    case '!thiccc': // Gives information about the bot and thanks the creators
+      client.say(target, 'Thicc is a slang term for a full-figured body, specifically a big butt and curvy waist. It is both used sexually and humorously.')
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!onlyfans':
