@@ -181,7 +181,7 @@ function onMessageHandler(target, context, msg, self) {
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!onlyfans':
-      switch (randomNum(6)) {
+      switch (randomNum(2)) {
         case 1:
           client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ')
           break;
