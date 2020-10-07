@@ -225,15 +225,3 @@ function onConnectedHandler(addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
   //client.say(opts.channels[0], `McloudiBot is here`);
 }
-
-onSub((channel, user, subInfo, msg) => {
-  client.say(channel, `Thank you for subbing ${user} mcloud2Dab`);
-})
-
-onSubExtend((channel, user, subInfo, msg) => {
-  client.say(channel, `Thank you for subbing ${user} for ${subInfo} mcloud2Dab`);
-})
-
-onSubGift((channel, user, subInfo, msg) => {
-  client.say(channel, `Thank you ${user.gifter} for gifting ${subInfo} subs mcloud2Dab`);
-})
