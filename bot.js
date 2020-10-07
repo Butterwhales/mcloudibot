@@ -225,3 +225,19 @@ function onConnectedHandler(addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
   //client.say(opts.channels[0], `McloudiBot is here`);
 }
+
+client.on("subscription", function (channel, username, method, message, userstate) {
+  client.say(channel, `Thank you for subbing ${username} mcloud2Dab`);
+});
+
+client.on("resub", function (channel, username, months, message, userstate, methods) {
+  client.say(channel, `${username} Has subscribed for ${months} months. mcloud2Dab`)
+});
+
+client.on("subgift", function (channel, username, streakMonths, recipient, methods, userstate) {
+  client.say(channel, `Thank you ${username} for gifting to ${recipient} mcloud2Dab`);
+});
+
+client.on("submysterygift", function (channel, username, numbOfSubs, methods, userstate) {
+  client.say(channel, `Thank you ${username} for gifting ${numbOfSubs} subs mcloud2Dab`);
+});
