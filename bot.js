@@ -185,7 +185,7 @@ function onMessageHandler(target, context, msg, self) {
       break;
     case '!thicc':
     case '!thiccc': // Gives information about the bot and thanks the creators
-      client.say(target, 'Thicc is a slang term for a full-figured body, specifically a big butt and curvy waist. It is both used sexually and humorously.')
+      client.say(target, 'Damn boy he thicc.')
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!onlyfans':
