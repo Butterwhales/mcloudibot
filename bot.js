@@ -126,7 +126,7 @@ function onMessageHandler(target, context, msg, self) {
       List of all possible commands with the bot (Including those not shown with the !help command )
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
       */
-      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !magic, !gamble`);
+      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !magic`);
       console.log(`* Executed ${commandName} command`);
       break;
     case '!discord': // Sends a link to the public stream discord
@@ -223,7 +223,7 @@ function onMessageHandler(target, context, msg, self) {
           break;
       }
       break;
-    case '!gamble':
+    /*case '!gamble':
       switch(randomNum(6)){
         case 3:
           client.say(target, `mcloudibot struck ${context.username}`)
@@ -239,7 +239,7 @@ function onMessageHandler(target, context, msg, self) {
           client.say(target, `mcloudibot missed ${context.username}`)
           console.log(`* Exectued ${commandName} command`);
           break;
-      }
+      }*/
     default:
       console.log(`* Unknown command ${commandName}`);
       break;
