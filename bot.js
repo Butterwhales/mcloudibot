@@ -180,7 +180,7 @@ function onMessageHandler(target, context, msg, self) {
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!bttvemotes': // Gives information about the bot and thanks the creators
-      client.say(target, 'The current enabled bttv emotes are 5Head , cloudPet , gachiBass , HYPERS , KKool , monkaW , OMEGALUL , pepeD , Pepega , PepeHands , PepeLaugh , PepePls , Poggers , and weirdChamp .')
+      client.say(target, 'The current enabled bttv emotes are 5Head , cloudPet , gachiBASS , HYPERS , KKool , monkaW , OMEGALUL , pepeD , Pepega , PepeHands , PepeLaugh , PepePls , POGGERS , and weirdChamp .')
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!thicc':
