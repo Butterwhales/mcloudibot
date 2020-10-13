@@ -244,6 +244,12 @@ function onMessageHandler(target, context, msg, self) {
       console.log(`* Unknown command ${commandName}`);
       break;
   }
+
+  if (msg.includes('(bigfollows . com)')){
+      //client.say(target, `mcloudibot headshot ${context.username}`)
+      client.ban(target, context.username , 'Viewbot promotion');
+      console.log(`* Removed viewbot`);
+  }
 }
 
 function dickRand() {
