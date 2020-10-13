@@ -203,6 +203,17 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, 'FeelsBadMan')
       console.log(`* Exectued ${commandName} command`);
       break;
+    case '!icebolt':  
+    case '!firebolt':  
+    case '!lightningbolt' :
+      switch(randomNum(2)){
+        case 1:
+          client.say(target, "It's super effective!")
+          break;
+        case 2:
+          client.say(target, "It's not very effective!")
+          break;
+      }
     default:
       console.log(`* Unknown command ${commandName}`);
       break;
