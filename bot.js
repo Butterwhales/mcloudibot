@@ -126,7 +126,7 @@ function onMessageHandler(target, context, msg, self) {
       List of all possible commands with the bot (Including those not shown with the !help command )
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
       */
-      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes`);
+      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !magic`);
       console.log(`* Executed ${commandName} command`);
       break;
     case '!discord': // Sends a link to the public stream discord
@@ -185,16 +185,18 @@ function onMessageHandler(target, context, msg, self) {
       break;
     case '!thicc':
     case '!thiccc': // Gives information about the bot and thanks the creators
-      client.say(target, 'Damn boy he thicc.')
+      client.say(target, 'Damn boy he thicc.');
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!onlyfans':
       switch (randomNum(2)) {
         case 1:
-          client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ')
+          client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ');
+          console.log(`* Exectued ${commandName} command`);
           break;
         case 2:
-          client.say(target, 'You wish. LUL')
+          client.say(target, 'You wish. LUL');
+          console.log(`* Exectued ${commandName} command`);
           break;
       }
       console.log(`* Exectued ${commandName} command`);
@@ -203,15 +205,21 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, 'FeelsBadMan')
       console.log(`* Exectued ${commandName} command`);
       break;
+    case '!magic': // lists all magic spells
+      client.say(target, 'List of all magic spells: !lightningbolt, !firebolt, and !icebolt');
+      console.log(`* Exectued ${commandName} command`);
+      break;  
     case '!icebolt':  
     case '!firebolt':  
     case '!lightningbolt' :
       switch(randomNum(2)){
         case 1:
-          client.say(target, "It's super effective!")
+          client.say(target, "It's super effective!");
+          console.log(`* Exectued ${commandName} command`);
           break;
         case 2:
-          client.say(target, "It's not very effective!")
+          client.say(target, "It's not very effective!");
+          console.log(`* Exectued ${commandName} command`);
           break;
       }
     default:
