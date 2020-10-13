@@ -166,7 +166,7 @@ function onMessageHandler(target, context, msg, self) {
       console.log(`* Executed ${commandName} command`);
       break;
     case '!f': // The bot pays it's respects
-      client.say(target, `f`);
+      client.say(target, `F`);
       console.log(`* Executed ${commandName} command`);
       break;
     case '!window':
