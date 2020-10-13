@@ -212,13 +212,18 @@ function onMessageHandler(target, context, msg, self) {
     case '!icebolt':  
     case '!firebolt':  
     case '!lightningbolt' :
-      switch(randomNum(2)){
+      switch(randomNum(3)){
         case 1:
           client.say(target, "It's super effective!");
           console.log(`* Exectued ${commandName} command`);
           break;
         case 2:
           client.say(target, "It's not very effective!");
+          console.log(`* Exectued ${commandName} command`);
+          break;
+        case 3:
+          client.say(target, `Lightning bolt struck ${context.username}`)
+          client.timeout(target, context.username , 5, "Lightning bolt");
           console.log(`* Exectued ${commandName} command`);
           break;
       }
