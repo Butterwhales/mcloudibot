@@ -227,12 +227,12 @@ function onMessageHandler(target, context, msg, self) {
       switch(randomNum(6)){
         case 3:
           client.say(target, `mcloudibot struck ${context.username}`)
-          client.timeout(target, context.username , 5, 'gamble 5s');
+          client.timeout(target, context.username , 5, 'See you in 5s');
           console.log(`* Exectued ${commandName} command`);
           break;
         case 4:
           client.say(target, `mcloudibot headshot ${context.username}`)
-          client.timeout(target, context.username , 30, 'gamble 30s');
+          client.timeout(target, context.username , 30, 'See you in 30s');
           console.log(`* Exectued ${commandName} command`);
           break;
         default:
