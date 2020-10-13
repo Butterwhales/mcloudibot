@@ -222,6 +222,7 @@ function onMessageHandler(target, context, msg, self) {
           console.log(`* Exectued ${commandName} command`);
           break;
       }
+      break;
     case '!gamble':
       switch(randomNum(6)){
         case 3:
