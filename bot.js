@@ -212,7 +212,7 @@ function onMessageHandler(target, context, msg, self) {
     case '!icebolt':  
     case '!firebolt':  
     case '!lightningbolt' :
-      switch(randomNum(3)){
+      switch(randomNum(2)){
         case 1:
           client.say(target, "It's super effective!");
           console.log(`* Exectued ${commandName} command`);
@@ -221,9 +221,16 @@ function onMessageHandler(target, context, msg, self) {
           client.say(target, "It's not very effective!");
           console.log(`* Exectued ${commandName} command`);
           break;
+      }
+    case '!gamble':
+      switch(randomNum(6)){
         case 3:
-          client.say(target, `Lightning bolt struck ${context.username}`)
-          client.timeout(target, context.username , 5, "Lightning bolt");
+          client.say(target, `mcloudibot struck ${context.username}`)
+          client.timeout(target, context.username , 5, 'gamble');
+          console.log(`* Exectued ${commandName} command`);
+          break;
+        default:
+          client.say(target, `mcloudibot missed ${context.username}`)
           console.log(`* Exectued ${commandName} command`);
           break;
       }
