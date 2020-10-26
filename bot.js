@@ -179,8 +179,14 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!bttvemotes': // Gives information about the bot and thanks the creators
+    case '!bttv':  
+    case '!bttvemotes': // Lists all currently enabled Better Twitch TV emotes
       client.say(target, 'The current enabled bttv emotes are catJAM , Clap , cloudPet , COGGERS , gachiBASS , HACKERMANS , Kissahomie5 , KKool , modCheck , pepeD , pepeJAM , PepePls , ppOverHeat , ricardoFlick , sumSmash , TriDance .')
+      console.log(`* Exectued ${commandName} command`);
+      break;
+    case '!ffz':  
+    case '!ffzemotes': // Lists all currently enabled FrankerZ emotes
+      client.say(target, 'The current enabled FrankerZ emotes are 4HEad, AYAYA, FeelsDankMan, forsenCD, HandsUp, HYPERS, KKonaW, LULW, monkaW, OkayChamp, PagChomp, PauseChamp, peepoPog, peepoPogYouPoo, peepoSad, Pepaga, pog, PogU, Sadge, WeirdChamp, WideHard, WideHardo, widepeepoHappy, widepeepoSad.')
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!thicc':
