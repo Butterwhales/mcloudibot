@@ -186,7 +186,7 @@ function onMessageHandler(target, context, msg, self) {
       break;
     case '!ffz':  
     case '!ffzemotes': // Lists all currently enabled FrankerZ emotes
-      client.say(target, 'The current enabled FrankerZ emotes are 4HEad , AYAYA , FeelsDankMan , forsenCD , HandsUp , HYPERS , KKonaW , LULW , monkaW , OkayChamp , PagChomp , PauseChamp , peepoPog , peepoPogYouPoo , peepoSad , Pepega , Pog , PogU , Sadge , WeirdChamp , WideHard , WideHardo , widepeepoHappy , widepeepoSad.')
+      client.say(target, 'The current enabled FrankerZ emotes are 4HEad , AYAYA , FeelsDankMan , forsenCD , HandsUp , HYPERS , KKonaW , LULW , monkaW , OkayChamp , PagChomp , PauseChamp , peepoPog , peepoPogYouPoo , peepoSad , Pepega , Pog , PogU , Sadge , WeirdChamp , WideHard , WideHardo , widepeepoHappy , widepeepoSad .')
       console.log(`* Exectued ${commandName} command`);
       break;
     case '!thicc':
