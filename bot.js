@@ -62,7 +62,7 @@ function onMessageHandler(target, user, msg, self) {
               client.say(target, `Set the death count to ${args[1]}`);
               break;
             default:
-              deathCount += 1;
+              deathCount += parseInt(1);
               client.say(target, `Added 1 to the death count`);
               break
           }
