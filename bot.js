@@ -1,5 +1,6 @@
 const tmi = require('tmi.js');
 const prefix = '!';
+const fs = require('fs');
 
 // Define configuration options
 const opts = {
@@ -29,49 +30,66 @@ let loopInterval = setInterval(function () {
 client.connect();
 
 // Called every time a message comes in
-function onMessageHandler(target, context, msg, self) {
+function onMessageHandler(target, user, msg, self) {
   if (self || !msg.startsWith(prefix)) { return; } // Ignore messages from the bot and messages not starting with the prefix
-  const args = msg.content.slice(prefix.length).split(/ +/);
-
+  //console.log(user)
+  const args = msg.slice(prefix.length).split(/ +/);
+  const command = args.shift().toLowerCase();
+  let deathCount;
   // Remove whitespace from chat message
-  const commandName = msg.trim().toLowerCase();
+  //const commandName = msg.trim().toLowerCase();
+  //console.log(args);
 
   // If the command is known, let's execute it
-  switch (commandName) {
-    case '!death':
-      fs.readFile('./deaths.txt', function (err, data) {
-        if (err) { throw err } //reads file
-        if (data.length != 0) deathCount = data;
+  switch (command) {
+    case 'death':
+      if (user['display-name'] == 'Mcloudi' || user['display-name'] == 'zilux' || user['display-name'] == 'Butterwhales' || user['display-name'] == 'gabethunder3') {
+        fs.readFile('./deaths.txt', function (err, data) {
+          if (err) { throw err } //reads file
+          if (data.length != 0) deathCount = data;
+          if (isNaN(data)) deathCount = 0;
           switch (args[0]) {
             case '+':
-              deathCount +=args[1]
+              deathCount += parseInt(args[1]);
               client.say(target, `Added ${args[1]} to the death count`);
               break;
             case '-':
-              deathCount -=args[1];
+              deathCount -= parseInt(args[1]);
               client.say(target, `Subtracted ${args[1]} from the death count`);
               break;
             case 'set':
-              deathCount = args[1];
+              deathCount = parseInt(args[1]);
               client.say(target, `Set the death count to ${args[1]}`);
               break;
             default:
-              deathCount +=1;
+              deathCount += 1;
               client.say(target, `Added 1 to the death count`);
               break
           }
+          fs.writeFile("./deaths.txt", deathCount, function (err) {
+            if (err) return console.log(err);
+          });
+        });
+      }
+      break;
+    case 'deaths':
+    case 'deathcount':
+      fs.readFile('./deaths.txt', function (err, data) {
+        if (err) { throw err } //reads file
+        if (data.length != 0) deathCount = data;
+        client.say(target, `Mcloudi has died ${deathCount} times`);
         fs.writeFile("./deaths.txt", deathCount, function (err) {
           if (err) return console.log(err);
         });
       });
       break;
-    case '!ping':
+    case 'ping':
       var a = Math.floor(Math.random() * 10) + 1;
       var b = Math.floor(Math.random() * 10) + 1;
       var op = ["*", "+", "/", "-"][Math.floor(Math.random() * 4)];
-      client.say(target, `How much is ${a} ${op} ${b} ? ${context.username}`);
+      client.say(target, `How much is ${a} ${op} ${b} ? ${user.username}`);
       break;
-    case '!loop':
+    case 'loop':
       if (loopInterval) { // Check if set
         console.log('stop loop');
         client.say(target, 'Loop Ended');
@@ -86,8 +104,8 @@ function onMessageHandler(target, context, msg, self) {
         }, 1800000); // 60000ms = 60s = 1min
       }
       break;
-    case '!size':
-    case '!dicksize': // Sizes up Chris'! Magnum Dong (Or not)
+    case 'size':
+    case 'dicksize': // Sizes up Chris'! Magnum Dong (Or not)
       var num = dickRand();
       switch (true) {
         case num <= 1:
@@ -132,7 +150,7 @@ function onMessageHandler(target, context, msg, self) {
       }
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!dab': // Dabs the specified amount of times
+    case 'dab': // Dabs the specified amount of times
       let num1 = randomNum(10);
       var dabs = (``);
       var i;
@@ -142,7 +160,7 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, dabs);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!coggers':
+    case 'coggers':
       let num2 = randomNum(10);
       var cogs = (``);
       var i;
@@ -152,14 +170,14 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, cogs);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!prime'://Automatically sends you to the command below 
-    case '!twitchprime':
-    case '!tp': // Asks if any Twitch Primers are chillin'
+    case 'prime'://Automatically sends you to the command below 
+    case 'twitchprime':
+    case 'tp': // Asks if any Twitch Primers are chillin'
       client.say(target, `Any Primers in the chat?`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!help'://Automatically sends you to the !commands output
-    case '!commands': // Informs the issuer of *most* possible commands with the bot
+    case 'help'://Automatically sends you to the !commands output
+    case 'commands': // Informs the issuer of *most* possible commands with the bot
       /*
       List of all possible commands with the bot (Including those not shown with the !help command )
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
@@ -167,11 +185,11 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !ffzemotes, !magic`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!discord': // Sends a link to the public stream discord
+    case 'discord': // Sends a link to the public stream discord
       client.say(target, `https://discord.gg/mTwYJYV`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!wap': // Grabs a bucket and a mop! What'd you think it'd do?
+    case 'wap': // Grabs a bucket and a mop! What'd you think it'd do?
       switch (randomNum(6)) {
         case 1:
           client.say(target, `Get a bucket and a mop!`);
@@ -198,41 +216,41 @@ function onMessageHandler(target, context, msg, self) {
 
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!subscribe':
-    case '!sub': // Generates a link to the subscribe button
+    case 'subscribe':
+    case 'sub': // Generates a link to the subscribe button
       client.say(target, `https://subs.twitch.tv/mcloudi`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!f': // The bot pays it's respects
+    case 'f': // The bot pays it's respects
       client.say(target, `F`);
       console.log(`* Executed ${commandName} command`);
       break;
-    case '!window':
-    case '!activate':
-    case '!windows': // Reminds Chris he needs to activate windows
+    case 'window':
+    case 'activate':
+    case 'windows': // Reminds Chris he needs to activate windows
       client.say(target, `Activate Windows`);
       console.log(`* Executed ${commandName} command`);
       break
-    case '!about': // Gives information about the bot and thanks the creators
+    case 'about': // Gives information about the bot and thanks the creators
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!bttv':
-    case '!bttvemotes': // Lists all currently enabled Better Twitch TV emotes
+    case 'bttv':
+    case 'bttvemotes': // Lists all currently enabled Better Twitch TV emotes
       client.say(target, 'The current enabled bttv emotes are catJAM , Clap , cloudPet , COGGERS , gachiBASS , HACKERMANS , Kissahomie5 , KKool , modCheck , pepeD , pepeJAM , PepePls , ppOverHeat , ricardoFlick , sumSmash , TriDance .')
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!ffz':
-    case '!ffzemotes': // Lists all currently enabled FrankerZ emotes
+    case 'ffz':
+    case 'ffzemotes': // Lists all currently enabled FrankerZ emotes
       client.say(target, 'The current enabled FrankerZ emotes are 4HEad , AYAYA , FeelsDankMan , forsenCD , HandsUp , HYPERS , KKonaW , LULW , monkaW , OkayChamp , PagChomp , PauseChamp , peepoPog , peepoPogYouPoo , peepoSad , Pepega , Pog , PogU , Sadge , WeirdChamp , WideHard , WideHardo , widepeepoHappy , widepeepoSad .')
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!thicc':
-    case '!thiccc': // Gives information about the bot and thanks the creators
+    case 'thicc':
+    case 'thiccc': // Gives information about the bot and thanks the creators
       client.say(target, 'Damn boy he thicc.');
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!onlyfans':
+    case 'onlyfans':
       switch (randomNum(2)) {
         case 1:
           client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ');
@@ -245,17 +263,17 @@ function onMessageHandler(target, context, msg, self) {
       }
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!man': // Gives information about the bot and thanks the creators
+    case 'man': // Gives information about the bot and thanks the creators
       client.say(target, 'FeelsBadMan')
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!magic': // lists all magic spells
+    case 'magic': // lists all magic spells
       client.say(target, 'List of all magic spells: !lightningbolt, !firebolt, and !icebolt');
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!icebolt':
-    case '!firebolt':
-    case '!lightningbolt':
+    case 'icebolt':
+    case 'firebolt':
+    case 'lightningbolt':
       switch (randomNum(2)) {
         case 1:
           client.say(target, "It's super effective!");
@@ -291,7 +309,7 @@ function onMessageHandler(target, context, msg, self) {
 
   if (msg.includes('(bigfollows . com)')) {
     //client.say(target, `mcloudibot headshot ${context.username}`)
-    client.ban(target, context.username, 'Viewbot promotion  ');
+    client.ban(target, user.username, 'Viewbot promotion  ');
     console.log(`* Removed viewbot`);
   }
 }
