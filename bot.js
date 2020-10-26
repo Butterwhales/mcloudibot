@@ -136,7 +136,7 @@ function onMessageHandler(target, context, msg, self) {
       List of all possible commands with the bot (Including those not shown with the !help command )
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
       */
-      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !magic`);
+      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !ffzemotes, !magic`);
       console.log(`* Executed ${commandName} command`);
       break;
     case '!discord': // Sends a link to the public stream discord
@@ -224,7 +224,7 @@ function onMessageHandler(target, context, msg, self) {
     case '!magic': // lists all magic spells
       client.say(target, 'List of all magic spells: !lightningbolt, !firebolt, and !icebolt');
       console.log(`* Exectued ${commandName} command`);
-      break;  
+      break; 
     case '!icebolt':  
     case '!firebolt':  
     case '!lightningbolt' :
