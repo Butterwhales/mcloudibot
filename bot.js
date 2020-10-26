@@ -46,7 +46,7 @@ function onMessageHandler(target, user, msg, self) {
       if (user['display-name'] == 'Mcloudi' || user['display-name'] == 'zilux' || user['display-name'] == 'Butterwhales' || user['display-name'] == 'gabethunder3') {
         fs.readFile('./deaths.txt', function (err, data) {
           if (err) { throw err } //reads file
-          if (data.length != 0) deathCount = data;
+          if (data.length != 0) deathCount = parseInt(data);
           if (isNaN(data)) deathCount = 0;
           switch (args[0]) {
             case '+':
