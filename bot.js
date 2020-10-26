@@ -286,7 +286,11 @@ client.on("subscription", function (channel, username, method, message, userstat
 });
 
 client.on("resub", function (channel, username, months, message, userstate, methods) {
-  client.say(channel, `${username} Has subscribed for ${months} months. mcloud2Dab`)
+  if(months == 0) {
+    client.say(channel, `Thank you for subbing ${username} again! mcloud2Dab`);
+  } else {
+    client.say(channel, `${username} Has subscribed for ${months} months. mcloud2Dab`)
+  }
 });
 
 client.on("subgift", function (channel, username, streakMonths, recipient, methods, userstate) {
