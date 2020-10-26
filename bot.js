@@ -31,12 +31,40 @@ client.connect();
 // Called every time a message comes in
 function onMessageHandler(target, context, msg, self) {
   if (self || !msg.startsWith(prefix)) { return; } // Ignore messages from the bot and messages not starting with the prefix
+  const args = msg.content.slice(prefix.length).split(/ +/);
 
   // Remove whitespace from chat message
   const commandName = msg.trim().toLowerCase();
 
   // If the command is known, let's execute it
   switch (commandName) {
+    case '!death':
+      fs.readFile('./deaths.txt', function (err, data) {
+        if (err) { throw err } //reads file
+        if (data.length != 0) deathCount = data;
+          switch (args[0]) {
+            case '+':
+              deathCount +=args[1]
+              client.say(target, `Added ${args[1]} to the death count`);
+              break;
+            case '-':
+              deathCount -=args[1];
+              client.say(target, `Subtracted ${args[1]} from the death count`);
+              break;
+            case 'set':
+              deathCount = args[1];
+              client.say(target, `Set the death count to ${args[1]}`);
+              break;
+            default:
+              deathCount +=1;
+              client.say(target, `Added 1 to the death count`);
+              break
+          }
+        fs.writeFile("./deaths.txt", deathCount, function (err) {
+          if (err) return console.log(err);
+        });
+      });
+      break;
     case '!ping':
       var a = Math.floor(Math.random() * 10) + 1;
       var b = Math.floor(Math.random() * 10) + 1;
@@ -189,12 +217,12 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!bttv':  
+    case '!bttv':
     case '!bttvemotes': // Lists all currently enabled Better Twitch TV emotes
       client.say(target, 'The current enabled bttv emotes are catJAM , Clap , cloudPet , COGGERS , gachiBASS , HACKERMANS , Kissahomie5 , KKool , modCheck , pepeD , pepeJAM , PepePls , ppOverHeat , ricardoFlick , sumSmash , TriDance .')
       console.log(`* Exectued ${commandName} command`);
       break;
-    case '!ffz':  
+    case '!ffz':
     case '!ffzemotes': // Lists all currently enabled FrankerZ emotes
       client.say(target, 'The current enabled FrankerZ emotes are 4HEad , AYAYA , FeelsDankMan , forsenCD , HandsUp , HYPERS , KKonaW , LULW , monkaW , OkayChamp , PagChomp , PauseChamp , peepoPog , peepoPogYouPoo , peepoSad , Pepega , Pog , PogU , Sadge , WeirdChamp , WideHard , WideHardo , widepeepoHappy , widepeepoSad .')
       console.log(`* Exectued ${commandName} command`);
@@ -224,11 +252,11 @@ function onMessageHandler(target, context, msg, self) {
     case '!magic': // lists all magic spells
       client.say(target, 'List of all magic spells: !lightningbolt, !firebolt, and !icebolt');
       console.log(`* Exectued ${commandName} command`);
-      break; 
-    case '!icebolt':  
-    case '!firebolt':  
-    case '!lightningbolt' :
-      switch(randomNum(2)){
+      break;
+    case '!icebolt':
+    case '!firebolt':
+    case '!lightningbolt':
+      switch (randomNum(2)) {
         case 1:
           client.say(target, "It's super effective!");
           console.log(`* Exectued ${commandName} command`);
@@ -261,10 +289,10 @@ function onMessageHandler(target, context, msg, self) {
       break;
   }
 
-  if (msg.includes('(bigfollows . com)')){
-      //client.say(target, `mcloudibot headshot ${context.username}`)
-      client.ban(target, context.username , 'Viewbot promotion  ');
-      console.log(`* Removed viewbot`);
+  if (msg.includes('(bigfollows . com)')) {
+    //client.say(target, `mcloudibot headshot ${context.username}`)
+    client.ban(target, context.username, 'Viewbot promotion  ');
+    console.log(`* Removed viewbot`);
   }
 }
 
@@ -302,7 +330,7 @@ client.on("subscription", function (channel, username, method, message, userstat
 });
 
 client.on("resub", function (channel, username, months, message, userstate, methods) {
-  if(months == 0) {
+  if (months == 0) {
     client.say(channel, `Thank you for subbing ${username} again! mcloud2Dab`);
   } else {
     client.say(channel, `${username} Has subscribed for ${months} months. mcloud2Dab`)
