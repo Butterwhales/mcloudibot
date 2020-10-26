@@ -115,10 +115,10 @@ function onMessageHandler(target, context, msg, self) {
       console.log(`* Executed ${commandName} command`);
       break;
     case '!coggers':
-      let num1 = randomNum(10);
+      let num2 = randomNum(10);
       var cogs = (``);
       var i;
-      for (i = 0; i < num1; i++) {
+      for (i = 0; i < num2; i++) {
         cogs += 'COGGERS ';
       }
       client.say(target, cogs);
