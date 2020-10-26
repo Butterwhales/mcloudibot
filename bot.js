@@ -114,6 +114,16 @@ function onMessageHandler(target, context, msg, self) {
       client.say(target, dabs);
       console.log(`* Executed ${commandName} command`);
       break;
+    case '!coggers':
+      let num1 = randomNum(10);
+      var cogs = (``);
+      var i;
+      for (i = 0; i < num1; i++) {
+        cogs += 'COGGERS ';
+      }
+      client.say(target, cogs);
+      console.log(`* Executed ${commandName} command`);
+      break;
     case '!prime'://Automatically sends you to the command below 
     case '!twitchprime':
     case '!tp': // Asks if any Twitch Primers are chillin'
