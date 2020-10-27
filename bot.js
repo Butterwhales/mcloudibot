@@ -37,7 +37,8 @@ function onMessageHandler(target, user, msg, self) {
   const command = args.shift().toLowerCase();
   let deathCount;
   // Remove whitespace from chat message
-  //const commandName = msg.trim().toLowerCase();
+  //const command
+   = msg.trim().toLowerCase();
   //console.log(args);
 
   // If the command is known, let's execute it
@@ -145,10 +146,11 @@ function onMessageHandler(target, user, msg, self) {
           client.say(target, `Mcloudi is packing a monstrous ${num} inch Schlong`);
           break;
         default:
-          console.log(`* Executed default ${commandName} command num = ${num}`);
+          console.log(`* Executed default ${command
+          } command num = ${num}`);
           break;
       }
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command} command`);
       break;
     case 'dab': // Dabs the specified amount of times
       let num1 = randomNum(10);
@@ -158,7 +160,8 @@ function onMessageHandler(target, user, msg, self) {
         dabs += 'mcloud2Dab ';
       }
       client.say(target, dabs);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'coggers':
       let num2 = randomNum(10);
@@ -168,13 +171,15 @@ function onMessageHandler(target, user, msg, self) {
         cogs += 'COGGERS ';
       }
       client.say(target, cogs);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'prime'://Automatically sends you to the command below 
     case 'twitchprime':
     case 'tp': // Asks if any Twitch Primers are chillin'
       client.say(target, `Any Primers in the chat?`);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'help'://Automatically sends you to the !commands output
     case 'commands': // Informs the issuer of *most* possible commands with the bot
@@ -183,11 +188,13 @@ function onMessageHandler(target, user, msg, self) {
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
       */
       client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !ffzemotes, !magic`);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'discord': // Sends a link to the public stream discord
       client.say(target, `https://discord.gg/mTwYJYV`);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'wap': // Grabs a bucket and a mop! What'd you think it'd do?
       switch (randomNum(6)) {
@@ -210,66 +217,80 @@ function onMessageHandler(target, user, msg, self) {
           client.say(target, `moist`);
           break;
         default:
-          console.log(`* Executed default ${commandName} command`);
+          console.log(`* Executed default ${command
+          } command`);
           break;
       }
 
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'subscribe':
     case 'sub': // Generates a link to the subscribe button
       client.say(target, `https://subs.twitch.tv/mcloudi`);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'f': // The bot pays it's respects
       client.say(target, `F`);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break;
     case 'window':
     case 'activate':
     case 'windows': // Reminds Chris he needs to activate windows
       client.say(target, `Activate Windows`);
-      console.log(`* Executed ${commandName} command`);
+      console.log(`* Executed ${command
+      } command`);
       break
     case 'about': // Gives information about the bot and thanks the creators
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
-      console.log(`* Exectued ${commandName} command`);
+      console.log(`* Exectued ${command
+      } command`);
       break;
     case 'bttv':
     case 'bttvemotes': // Lists all currently enabled Better Twitch TV emotes
       client.say(target, 'The current enabled bttv emotes are catJAM , Clap , cloudPet , COGGERS , gachiBASS , HACKERMANS , Kissahomie5 , KKool , modCheck , pepeD , pepeJAM , PepePls , ppOverHeat , ricardoFlick , sumSmash , TriDance .')
-      console.log(`* Exectued ${commandName} command`);
+      console.log(`* Exectued ${command
+      } command`);
       break;
     case 'ffz':
     case 'ffzemotes': // Lists all currently enabled FrankerZ emotes
       client.say(target, 'The current enabled FrankerZ emotes are 4HEad , AYAYA , FeelsDankMan , forsenCD , HandsUp , HYPERS , KKonaW , LULW , monkaW , OkayChamp , PagChomp , PauseChamp , peepoPog , peepoPogYouPoo , peepoSad , Pepega , Pog , PogU , Sadge , WeirdChamp , WideHard , WideHardo , widepeepoHappy , widepeepoSad .')
-      console.log(`* Exectued ${commandName} command`);
+      console.log(`* Exectued ${command
+      } command`);
       break;
     case 'thicc':
     case 'thiccc': // Gives information about the bot and thanks the creators
       client.say(target, 'Damn boy he thicc.');
-      console.log(`* Exectued ${commandName} command`);
+      console.log(`* Exectued ${command
+      } command`);
       break;
     case 'onlyfans':
       switch (randomNum(2)) {
         case 1:
           client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ');
-          console.log(`* Exectued ${commandName} command`);
+          console.log(`* Exectued ${command
+          } command`);
           break;
         case 2:
           client.say(target, 'You wish. LUL');
-          console.log(`* Exectued ${commandName} command`);
+          console.log(`* Exectued ${command
+          } command`);
           break;
       }
-      console.log(`* Exectued ${commandName} command`);
+      console.log(`* Exectued ${command
+      } command`);
       break;
     case 'man': // Gives information about the bot and thanks the creators
       client.say(target, 'FeelsBadMan')
-      console.log(`* Exectued ${commandName} command`);
+      console.log(`* Exectued ${command
+      } command`);
       break;
     case 'magic': // lists all magic spells
       client.say(target, 'List of all magic spells: !lightningbolt, !firebolt, and !icebolt');
-      console.log(`* Exectued ${commandName} command`);
+      console.log(`* Exectued ${command
+      } command`);
       break;
     case 'icebolt':
     case 'firebolt':
@@ -277,11 +298,13 @@ function onMessageHandler(target, user, msg, self) {
       switch (randomNum(2)) {
         case 1:
           client.say(target, "It's super effective!");
-          console.log(`* Exectued ${commandName} command`);
+          console.log(`* Exectued ${command
+          } command`);
           break;
         case 2:
           client.say(target, "It's not very effective!");
-          console.log(`* Exectued ${commandName} command`);
+          console.log(`* Exectued ${command
+          } command`);
           break;
       }
       break;
@@ -290,20 +313,24 @@ function onMessageHandler(target, user, msg, self) {
         case 3:
           client.say(target, `mcloudibot struck ${context.username}`)
           client.timeout(target, context.username , 5, 'See you in 5s');
-          console.log(`* Exectued ${commandName} command`);
+          console.log(`* Exectued ${command
+          } command`);
           break;
         case 4:
           client.say(target, `mcloudibot headshot ${context.username}`)
           client.timeout(target, context.username , 30, 'See you in 30s');
-          console.log(`* Exectued ${commandName} command`);
+          console.log(`* Exectued ${command
+          } command`);
           break;
         default:
           client.say(target, `mcloudibot missed ${context.username}`)
-          console.log(`* Exectued ${commandName} command`);
+          console.log(`* Exectued ${command
+          } command`);
           break;
       }*/
     default:
-      console.log(`* Unknown command ${commandName}`);
+      console.log(`* Unknown command ${command
+      }`);
       break;
   }
 
