@@ -42,7 +42,7 @@ function onMessageHandler(target, user, msg, self) {
 
   // If the command is known, let's execute it
   switch (command) {
-    case 'death':
+    case '!death':
       if (user['display-name'] == 'Mcloudi' || user['display-name'] == 'zilux' || user['display-name'] == 'Butterwhales' || user['display-name'] == 'gabethunder3') {
         fs.readFile('./deaths.txt', function (err, data) {
           if (err) { throw err } //reads file
