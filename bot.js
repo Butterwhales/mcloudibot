@@ -37,8 +37,7 @@ function onMessageHandler(target, user, msg, self) {
   const command = args.shift().toLowerCase();
   let deathCount;
   // Remove whitespace from chat message
-  //const command
-   = msg.trim().toLowerCase();
+  //const command = msg.trim().toLowerCase();
   //console.log(args);
 
   // If the command is known, let's execute it
