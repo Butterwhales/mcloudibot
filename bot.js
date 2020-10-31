@@ -180,6 +180,9 @@ function onMessageHandler(target, user, msg, self) {
       console.log(`* Executed ${command
       } command`);
       break;
+    case 'twitter':
+      client.say(target, `Here is mcloudi's twitter: https://twitter.com/McloudI_?s=20 `);
+      break;
     case 'help'://Automatically sends you to the !commands output
     case 'commands': // Informs the issuer of *most* possible commands with the bot
       /*
