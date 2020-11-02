@@ -183,6 +183,7 @@ function onMessageHandler(target, user, msg, self) {
     case 'twitter':
       client.say(target, `Here is mcloudi's twitter: https://twitter.com/McloudI_?s=20 `);
       break;
+    case 'streamraider':  
     case 'streamraiders':
       client.say(target, `Join us in battle! https://www.streamraiders.com/t/mcloudi `);
       break;
