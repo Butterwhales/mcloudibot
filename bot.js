@@ -193,7 +193,7 @@ function onMessageHandler(target, user, msg, self) {
       List of all possible commands with the bot (Including those not shown with the !help command )
       dicksize, dab, prime, discord, wap, sub, activate, f, about, 
       */
-      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !sub, !about, !onlyfans, !activate, !bttvemotes, !ffzemotes, !magic`);
+      client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !coggers, !sub, !about, !onlyfans, !activate, !bttvemotes, !ffzemotes, !magic`);
       console.log(`* Executed ${command
       } command`);
       break;
