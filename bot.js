@@ -37,7 +37,7 @@ function onMessageHandler(target, user, msg, self) {
  // let argsClone = { ...args };
   const command = args.shift().toLowerCase();
   //const emoteArray = msg.slice(prefix.lenght).shift(/ +/);
-  const emote = args;
+  const emote = msg;
   
   let deathCount;
   // Remove whitespace from chat message
@@ -155,6 +155,7 @@ function onMessageHandler(target, user, msg, self) {
       }
       console.log(`* Executed ${command} command`);
       break;
+    case 'mcloud2Dab':
     case 'dab': // Dabs the specified amount of times
       let num1 = randomNum(10);
       var dabs = (``);
