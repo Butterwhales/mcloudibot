@@ -168,7 +168,7 @@ function onMessageHandler(target, user, msg, self) {
       var cogs = (``);
       var i;
       for (i = 0; i < num2; i++) {
-        cogs += args + ' ';
+        cogs += command + ' ';
       }
       client.say(target, cogs);
       console.log(`* Executed ${command
