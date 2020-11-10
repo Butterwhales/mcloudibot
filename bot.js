@@ -163,11 +163,12 @@ function onMessageHandler(target, user, msg, self) {
       } command`);
       break;
     case 'coggers':
+    case 'hackermans':  
       let num2 = randomNum(10);
       var cogs = (``);
       var i;
       for (i = 0; i < num2; i++) {
-        cogs += 'COGGERS ';
+        cogs += command.toUpperCase + ' ';
       }
       client.say(target, cogs);
       console.log(`* Executed ${command
