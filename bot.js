@@ -208,7 +208,7 @@ function onMessageHandler(target, user, msg, self) {
     case 'widehard':
     case 'widehardo': 
     case 'widepeepohappy':
-    case 'widepeeposad':
+    case 'widepeeposad': case 'd:': case 'duckerz':
       let num2 = randomNum(10);
       var cogs = (``);
       var i;
