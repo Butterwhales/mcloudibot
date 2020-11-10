@@ -174,7 +174,7 @@ function onMessageHandler(target, user, msg, self) {
     case 'catjam':
     case 'clap':
     case 'cloudpet':
-    case 'gachibASS':
+    case 'gachibass':
     case 'kissahomie5':
     case 'kkool':
     case 'modcheck':
@@ -184,7 +184,31 @@ function onMessageHandler(target, user, msg, self) {
     case 'ppoverheat':
     case 'ricardoflick':
     case 'sumsmash':
-    case 'tridance':  
+    case 'tridance':
+    case '4head'://FFZ
+    case 'ayaya':
+    case 'feelsdankman':
+    case 'forsencd':
+    case 'handsup':
+    case 'hypers':
+    case 'kkonaw':
+    case 'lulw':
+    case 'monkaw':
+    case 'okaychamp':
+    case 'pagchomp':
+    case 'pausechamp':
+    case 'peepopog':
+    case 'peepopogyoupoo':
+    case 'peeposad':
+    case 'pepega':
+    case 'pog':
+    case 'pogu':
+    case 'sadge':
+    case 'weirdchamp':
+    case 'widehard':
+    case 'widehardo': 
+    case 'widepeepohappy':
+    case 'widepeeposad':
       let num2 = randomNum(10);
       var cogs = (``);
       var i;
