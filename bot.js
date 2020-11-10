@@ -34,10 +34,10 @@ function onMessageHandler(target, user, msg, self) {
   if (self || !msg.startsWith(prefix)) { return; } // Ignore messages from the bot and messages not starting with the prefix
   //console.log(user)
   const args = msg.slice(prefix.length).split(/ +/);
-  let argsClone = { ...args };
+ // let argsClone = { ...args };
   const command = args.shift().toLowerCase();
   //const emoteArray = msg.slice(prefix.lenght).shift(/ +/);
-  const emote = argsClone.shift();
+  const emote = args[1];
   
   let deathCount;
   // Remove whitespace from chat message
