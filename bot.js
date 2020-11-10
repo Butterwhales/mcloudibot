@@ -170,48 +170,17 @@ function onMessageHandler(target, user, msg, self) {
     case 'coggers':
     case 'hackermans':
     case 'mcloud2triggered':
-    case 'pepega':
-    case 'catjam':
-    case 'clap':
-    case 'cloudpet':
-    case 'gachibass':
-    case 'kissahomie5':
-    case 'kkool':
-    case 'modcheck':
-    case 'peped':
-    case 'pepejam':
-    case 'pepepls':
-    case 'ppoverheat':
-    case 'ricardoflick':
-    case 'sumsmash':
-    case 'tridance':
-    case '4head'://FFZ
-    case 'ayaya':
-    case 'feelsdankman':
-    case 'forsencd':
-    case 'handsup':
-    case 'hypers':
-    case 'kkonaw':
-    case 'lulw':
-    case 'monkaw':
-    case 'okaychamp':
-    case 'pagchomp':
-    case 'pausechamp':
-    case 'peepopog':
-    case 'peepopogyoupoo':
-    case 'peeposad':
-    case 'pepega':
-    case 'pog':
-    case 'pogu':
-    case 'sadge':
-    case 'weirdchamp':
-    case 'widehard':
-    case 'widehardo': 
+    case 'catjam': case 'clap': case 'pepega': case 'sumsmash': case 'tridance': case 'cloudpet': case 'gachibass': case 'kissahomie5': case 'kkool': case 'modcheck': case 'peped':
+    case 'pepejam': case 'pepepls': case 'ppoverheat': case 'ricardoflick':
+    case '4head'://FFZ 
+    case 'feelsdankman': case 'forsencd': case 'ayaya': case 'handsup': case 'hypers': case 'kkonaw': case 'lulw':
+    case 'pausechamp': case 'peepopog': case 'pagchomp': case 'okaychamp': case 'monkaw': case 'pepega': case 'pog': case 'pogu': case 'sadge':case 'weirdchamp': case 'widehard': case 'widehardo': case 'peeposad': case 'peepopogyoupoo':
     case 'widepeepohappy'://:case ':tf:'
     case 'widepeeposad': case 'd:': case 'duckerz': case 'angelthump': case 'ariw': case 'baconeffect': case 'basedgod': case 'brobalt': case 'bttvnice': case 'burself': case 'buttersauce': case 'candianrage': case 'cigrip': case 'concerndoge': case 'cruw': case 'cvhazmat': case 'cvl': case 'cvmask': case 'cvr': case 'datsauce':
     case 'fcreep': case 'feelsamazingman': case 'feelsbadman': case 'feelsbirthdayman': case 'feelsgoodman': case 'feelspumpkinman': case 'firespeed': case 'fishmoley': case 'foreveralone': case 'gaben': case 'hahaa': case 'hailhelix': case 'herbperve': case 'hhhehehe': case 'hhydro': case 'iamsocal': case 'idog': case 'kappacool': case 'karappa': case 'kkona':
     case 'lul': case 'm&mjc': case 'minijulia': case 'monkas': case 'nam': case 'notsquishy': case 'pedobear': case 'poledoge': case 'rarepepe': case 'rebeccablack': case 'ronsmug': case 'rstrike': case 'saltycorn': case 'savagejerky': case 'shoopdawhoop': case 'sosgame': case 'sourpls': case 'sqshy': case 'suchfraud':
-    case 'swedswag': case 'taxibro': case 'tehpolecat': case 'topham': case 'twat': case 'vapenation': case 'vislaud': case 'watchusay': case'wowee': case 'wubtf': case 'yetiz': case 'zappa':   
+    case 'swedswag': case 'taxibro': case 'tehpolecat': case 'topham': case 'twat': case 'vapenation': case 'vislaud': case 'watchusay': case'wowee': case 'wubtf': case 'yetiz': case 'zappa':
+    case '<3':// Regular twitch
       let num2 = randomNum(10);
       var cogs = (``);
       var i;
