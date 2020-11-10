@@ -35,8 +35,8 @@ function onMessageHandler(target, user, msg, self) {
   //console.log(user)
   const args = msg.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
-  const emoteArray = msg.slice(prefix.lenght).shift(/ +/);
-  const emote = emoteArray.shift();
+  //const emoteArray = msg.slice(prefix.lenght).shift(/ +/);
+  //const emote = emoteArray.shift();
   
   let deathCount;
   // Remove whitespace from chat message
