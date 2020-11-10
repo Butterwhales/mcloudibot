@@ -35,6 +35,7 @@ function onMessageHandler(target, user, msg, self) {
   //console.log(user)
   const args = msg.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
+  const emote = args.shift();
   let deathCount;
   // Remove whitespace from chat message
   //const command = msg.trim().toLowerCase();
@@ -168,7 +169,7 @@ function onMessageHandler(target, user, msg, self) {
       var cogs = (``);
       var i;
       for (i = 0; i < num2; i++) {
-        cogs += command + ' ';
+        cogs += emote + ' ';
       }
       client.say(target, cogs);
       console.log(`* Executed ${command
