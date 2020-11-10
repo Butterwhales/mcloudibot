@@ -208,7 +208,10 @@ function onMessageHandler(target, user, msg, self) {
     case 'widehard':
     case 'widehardo': 
     case 'widepeepohappy':
-    case 'widepeeposad': case 'd:': case 'duckerz':
+    case 'widepeeposad': case 'd:': case 'duckerz' case ':tf:': case 'angelthump': case 'ariw': case 'baconeffect': case 'basedgod': case 'brobalt': case 'bttvnice': case 'burself': case 'buttersauce': case 'candianrage': case 'cigrip': case 'concerndoge': case 'cruw': case 'cvhazmat': case 'cvl': case 'cvmask': case 'cvr': case 'datsauce':
+    case 'fcreep': case 'feelsamazingman': case 'feelsbadman': case 'feelsbirthdayman': case 'feelsgoodman': case 'feelspumpkinman': case 'firespeed': case 'fishmoley': case 'foreveralone': case 'gaben': case 'hahaa': case 'hailhelix': case 'herbperve': case 'hhhehehe': case 'hhydro': case 'iamsocal': case 'idog': case 'kappacool': case 'karappa': case 'kkona':
+    case 'lul': case 'm&mjc': case 'minijulia': case 'monkas': case 'nam': case 'notsquishy': case 'pedoBear': case 'poledoge': case 'rarepepe': case 'rebeccablack': case 'ronsmug': case 'rstrike': case 'saltycorn': case 'savagejerky': case 'shoopdawhoop': case 'sosgame': case 'sourpls': case 'sqshy': case 'suchfraud':
+    case 'swedswag': case 'taxibro': case 'tehpolecat': case 'topham': case 'twat': case 'vapenation': case 'vislaud': case 'watchusay': case'wowee': case 'wubtf': case 'yetiz': case 'zappa':   
       let num2 = randomNum(10);
       var cogs = (``);
       var i;
