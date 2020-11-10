@@ -207,7 +207,7 @@ function onMessageHandler(target, user, msg, self) {
     case 'weirdchamp':
     case 'widehard':
     case 'widehardo': 
-    case 'widepeepohappy'//:case ':tf:'
+    case 'widepeepohappy'://:case ':tf:'
     case 'widepeeposad': case 'd:': case 'duckerz': case 'angelthump': case 'ariw': case 'baconeffect': case 'basedgod': case 'brobalt': case 'bttvnice': case 'burself': case 'buttersauce': case 'candianrage': case 'cigrip': case 'concerndoge': case 'cruw': case 'cvhazmat': case 'cvl': case 'cvmask': case 'cvr': case 'datsauce':
     case 'fcreep': case 'feelsamazingman': case 'feelsbadman': case 'feelsbirthdayman': case 'feelsgoodman': case 'feelspumpkinman': case 'firespeed': case 'fishmoley': case 'foreveralone': case 'gaben': case 'hahaa': case 'hailhelix': case 'herbperve': case 'hhhehehe': case 'hhydro': case 'iamsocal': case 'idog': case 'kappacool': case 'karappa': case 'kkona':
     case 'lul': case 'm&mjc': case 'minijulia': case 'monkas': case 'nam': case 'notsquishy': case 'pedobear': case 'poledoge': case 'rarepepe': case 'rebeccablack': case 'ronsmug': case 'rstrike': case 'saltycorn': case 'savagejerky': case 'shoopdawhoop': case 'sosgame': case 'sourpls': case 'sqshy': case 'suchfraud':
