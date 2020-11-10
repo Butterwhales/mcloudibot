@@ -168,7 +168,23 @@ function onMessageHandler(target, user, msg, self) {
       } command`);
       break;
     case 'coggers':
-    case 'hackermans':  
+    case 'hackermans':
+    case 'mcloud2triggered':
+    case 'pepega':
+    case 'catjam':
+    case 'clap':
+    case 'cloudpet':
+    case 'gachibASS':
+    case 'kissahomie5':
+    case 'kkool':
+    case 'modcheck':
+    case 'peped':
+    case 'pepejam':
+    case 'pepepls':
+    case 'ppoverheat':
+    case 'ricardoflick':
+    case 'sumsmash':
+    case 'tridance':  
       let num2 = randomNum(10);
       var cogs = (``);
       var i;
