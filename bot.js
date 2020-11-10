@@ -155,7 +155,7 @@ function onMessageHandler(target, user, msg, self) {
       }
       console.log(`* Executed ${command} command`);
       break;
-    case 'mcloud2Dab':
+    case 'mcloud2dab':
     case 'dab': // Dabs the specified amount of times
       let num1 = randomNum(10);
       var dabs = (``);
