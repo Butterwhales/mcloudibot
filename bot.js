@@ -220,6 +220,11 @@ function onMessageHandler(target, user, msg, self) {
       console.log(`* Executed ${command
         } command`);
       break;
+    case 'website':
+      client.say(target, `https://www.mcloudi.com`);
+      console.log(`* Executed ${command
+      } command`);
+      break;
     case 'wap': // Grabs a bucket and a mop! What'd you think it'd do?
       switch (randomNum(6)) {
         case 1:
