@@ -34,11 +34,11 @@ function onMessageHandler(target, user, msg, self) {
   if (self || !msg.startsWith(prefix)) { return; } // Ignore messages from the bot and messages not starting with the prefix
   //console.log(user)
   const args = msg.slice(prefix.length).split(/ +/);
- // let argsClone = { ...args };
+  // let argsClone = { ...args };
   const command = args.shift().toLowerCase();
   //const emoteArray = msg.slice(prefix.lenght).shift(/ +/);
   const emote = msg;
-  
+
   let deathCount;
   // Remove whitespace from chat message
   //const command = msg.trim().toLowerCase();
@@ -150,7 +150,7 @@ function onMessageHandler(target, user, msg, self) {
           break;
         default:
           console.log(`* Executed default ${command
-          } command num = ${num}`);
+            } command num = ${num}`);
           break;
       }
       console.log(`* Executed ${command} command`);
@@ -165,7 +165,7 @@ function onMessageHandler(target, user, msg, self) {
       }
       client.say(target, dabs);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'coggers':
     case 'hackermans':
@@ -174,12 +174,12 @@ function onMessageHandler(target, user, msg, self) {
     case 'pepejam': case 'pepepls': case 'ppoverheat': case 'ricardoflick':
     case '4head'://FFZ 
     case 'feelsdankman': case 'forsencd': case 'ayaya': case 'handsup': case 'hypers': case 'kkonaw': case 'lulw':
-    case 'pausechamp': case 'peepopog': case 'pagchomp': case 'okaychamp': case 'monkaw': case 'pepega': case 'pog': case 'pogu': case 'sadge':case 'weirdchamp': case 'widehard': case 'widehardo': case 'peeposad': case 'peepopogyoupoo':
+    case 'pausechamp': case 'peepopog': case 'pagchomp': case 'okaychamp': case 'monkaw': case 'pepega': case 'pog': case 'pogu': case 'sadge': case 'weirdchamp': case 'widehard': case 'widehardo': case 'peeposad': case 'peepopogyoupoo':
     case 'widepeepohappy'://:case ':tf:'
     case 'widepeeposad': case 'd:': case 'duckerz': case 'angelthump': case 'ariw': case 'baconeffect': case 'basedgod': case 'brobalt': case 'bttvnice': case 'burself': case 'buttersauce': case 'candianrage': case 'cigrip': case 'concerndoge': case 'cruw': case 'cvhazmat': case 'cvl': case 'cvmask': case 'cvr': case 'datsauce':
     case 'fcreep': case 'feelsamazingman': case 'feelsbadman': case 'feelsbirthdayman': case 'feelsgoodman': case 'feelspumpkinman': case 'firespeed': case 'fishmoley': case 'foreveralone': case 'gaben': case 'hahaa': case 'hailhelix': case 'herbperve': case 'hhhehehe': case 'hhydro': case 'iamsocal': case 'idog': case 'kappacool': case 'karappa': case 'kkona':
     case 'lul': case 'm&mjc': case 'minijulia': case 'monkas': case 'nam': case 'notsquishy': case 'pedobear': case 'poledoge': case 'rarepepe': case 'rebeccablack': case 'ronsmug': case 'rstrike': case 'saltycorn': case 'savagejerky': case 'shoopdawhoop': case 'sosgame': case 'sourpls': case 'sqshy': case 'suchfraud':
-    case 'swedswag': case 'taxibro': case 'tehpolecat': case 'topham': case 'twat': case 'vapenation': case 'vislaud': case 'watchusay': case'wowee': case 'wubtf': case 'yetiz': case 'zappa':
+    case 'swedswag': case 'taxibro': case 'tehpolecat': case 'topham': case 'twat': case 'vapenation': case 'vislaud': case 'watchusay': case 'wowee': case 'wubtf': case 'yetiz': case 'zappa':
     case '<3':// Regular twitch
       let num2 = randomNum(10);
       var cogs = (``);
@@ -189,19 +189,19 @@ function onMessageHandler(target, user, msg, self) {
       }
       client.say(target, cogs);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'prime'://Automatically sends you to the command below 
     case 'twitchprime':
     case 'tp': // Asks if any Twitch Primers are chillin'
       client.say(target, `Any Primers in the chat?`);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'twitter':
       client.say(target, `Here is mcloudi's twitter: https://twitter.com/McloudI_?s=20 `);
       break;
-    case 'streamraider':  
+    case 'streamraider':
     case 'streamraiders':
       client.say(target, `Join us in battle! https://www.streamraiders.com/t/mcloudi `);
       break;
@@ -213,12 +213,12 @@ function onMessageHandler(target, user, msg, self) {
       */
       client.say(target, `List of current commands: !dicksize, !dab, !prime, !discord, !wap, !coggers, !sub, !about, !onlyfans, !activate, !bttvemotes, !ffzemotes, !magic`);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'discord': // Sends a link to the public stream discord
       client.say(target, `https://discord.gg/mTwYJYV`);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'wap': // Grabs a bucket and a mop! What'd you think it'd do?
       switch (randomNum(6)) {
@@ -242,79 +242,79 @@ function onMessageHandler(target, user, msg, self) {
           break;
         default:
           console.log(`* Executed default ${command
-          } command`);
+            } command`);
           break;
       }
 
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'subscribe':
     case 'sub': // Generates a link to the subscribe button
       client.say(target, `https://subs.twitch.tv/mcloudi`);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'f': // The bot pays it's respects
       client.say(target, `F`);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break;
     case 'window':
     case 'activate':
     case 'windows': // Reminds Chris he needs to activate windows
       client.say(target, `Activate Windows`);
       console.log(`* Executed ${command
-      } command`);
+        } command`);
       break
     case 'about': // Gives information about the bot and thanks the creators
       client.say(target, 'Coded by: @gabethunder3 , @NubsiePie , and @Butterwhales. Thanks to @Mcloudi for humoring our B.S.!')
       console.log(`* Exectued ${command
-      } command`);
+        } command`);
       break;
     case 'bttv':
     case 'bttvemotes': // Lists all currently enabled Better Twitch TV emotes
       client.say(target, 'The current enabled bttv emotes are catJAM , Clap , cloudPet , COGGERS , gachiBASS , HACKERMANS , Kissahomie5 , KKool , modCheck , pepeD , pepeJAM , PepePls , ppOverHeat , ricardoFlick , sumSmash , TriDance .')
       console.log(`* Exectued ${command
-      } command`);
+        } command`);
       break;
     case 'ffz':
     case 'ffzemotes': // Lists all currently enabled FrankerZ emotes
       client.say(target, 'The current enabled FrankerZ emotes are 4HEad , AYAYA , FeelsDankMan , forsenCD , HandsUp , HYPERS , KKonaW , LULW , monkaW , OkayChamp , PagChomp , PauseChamp , peepoPog , peepoPogYouPoo , peepoSad , Pepega , Pog , PogU , Sadge , WeirdChamp , WideHard , WideHardo , widepeepoHappy , widepeepoSad .')
       console.log(`* Exectued ${command
-      } command`);
+        } command`);
       break;
     case 'thicc':
     case 'thiccc': // Gives information about the bot and thanks the creators
       client.say(target, 'Damn boy he thicc.');
       console.log(`* Exectued ${command
-      } command`);
+        } command`);
       break;
     case 'onlyfans':
       switch (randomNum(2)) {
         case 1:
           client.say(target, 'Doesn\'t exist yet but maybe some day. ;) ');
           console.log(`* Exectued ${command
-          } command`);
+            } command`);
           break;
         case 2:
           client.say(target, 'You wish. LUL');
           console.log(`* Exectued ${command
-          } command`);
+            } command`);
           break;
       }
       console.log(`* Exectued ${command
-      } command`);
+        } command`);
       break;
     case 'man': // Gives information about the bot and thanks the creators
       client.say(target, 'FeelsBadMan')
       console.log(`* Exectued ${command
-      } command`);
+        } command`);
       break;
     case 'magic': // lists all magic spells
       client.say(target, 'List of all magic spells: !lightningbolt, !firebolt, and !icebolt');
       console.log(`* Exectued ${command
-      } command`);
+        } command`);
       break;
     case 'icebolt':
     case 'firebolt':
@@ -323,12 +323,12 @@ function onMessageHandler(target, user, msg, self) {
         case 1:
           client.say(target, "It's super effective!");
           console.log(`* Exectued ${command
-          } command`);
+            } command`);
           break;
         case 2:
           client.say(target, "It's not very effective!");
           console.log(`* Exectued ${command
-          } command`);
+            } command`);
           break;
       }
       break;
@@ -354,7 +354,7 @@ function onMessageHandler(target, user, msg, self) {
       }*/
     default:
       console.log(`* Unknown command ${command
-      }`);
+        }`);
       break;
   }
 
