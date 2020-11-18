@@ -220,6 +220,11 @@ function onMessageHandler(target, user, msg, self) {
       console.log(`* Executed ${command
         } command`);
       break;
+    case 'website':
+      client.say(target, `https://www.mcloudi.com`);
+      console.log(`* Executed ${command
+      } command`);
+      break;
     case 'wap': // Grabs a bucket and a mop! What'd you think it'd do?
       switch (randomNum(6)) {
         case 1:
@@ -406,7 +411,7 @@ client.on("resub", function (channel, username, months, message, userstate, meth
   if (months == 0) {
     client.say(channel, `Thank you for subbing ${username} again! mcloud2Dab`);
   } else {
-    client.say(channel, `${username} Has subscribed for ${months} months. mcloud2Dab`)
+    client.say(channel, `${username} Has subscribed for ${months} months. mcloud2Dab`);
   }
 });
 
