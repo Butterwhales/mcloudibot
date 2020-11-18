@@ -332,6 +332,10 @@ function onMessageHandler(target, user, msg, self) {
           break;
       }
       break;
+    case 'server':
+      client.say(target, "This server is a private paper spigot server on a minecraft earth map and Mcloudi is playing as the first lady of the USA.");
+      console.log(`* Exectued ${command} command`);
+      break;
     /*case '!gamble':
       switch(randomNum(6)){
         case 3:
@@ -358,7 +362,7 @@ function onMessageHandler(target, user, msg, self) {
       break;
   }
 
-  if (msg.includes('bigfollows*com')) {
+  if (msg.includes('bigfollows*com') || msg.includes('bigfollows .com')) {
     //client.say(target, `mcloudibot headshot ${context.username}`)
     client.ban(target, user.username, 'Viewbot promotion  ');
     console.log(`* Removed viewbot promotion`);
