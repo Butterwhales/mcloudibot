@@ -367,7 +367,7 @@ function onMessageHandler(target, user, msg, self) {
       break;
   }
 
-  if (msg.includes('bigfollows*com') || msg.includes('bigfollows .com')) {
+  if (msg.includes('bigfollows*com') || msg.includes('https://clck.ru/R9gQV')) {
     //client.say(target, `mcloudibot headshot ${context.username}`)
     client.ban(target, user.username, 'Viewbot promotion  ');
     console.log(`* Removed viewbot promotion`);
