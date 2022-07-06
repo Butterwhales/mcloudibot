@@ -174,17 +174,19 @@ function onMessageHandler(target, user, msg, self) {
       client.say(target, "The game is Fire Red with Kaizo IronMon Ruleset. http://ironmon.gg/\n");
       break;
     case 'pick':
-      client.say(opts.channels[0], 'Pick Period Started');
-      if (args[0] > 0){
-        timeout = setTimeout(() => {
-          pickFunction(args[0])
-        },30000);
-      } else {
-        timeout = setTimeout(() => {
-          pickFunction(2)
-        },15000);
+      if (botMods.includes(user['display-name'])) {
+        client.say(opts.channels[0], 'Pick Period Started');
+        if (args[0] > 0){
+          timeout = setTimeout(() => {
+            pickFunction(args[0])
+          },30000);
+        } else {
+          timeout = setTimeout(() => {
+            pickFunction(2)
+          },15000);
+        }
+        timeoutStatus = true;
       }
-      timeoutStatus = true;
       break;
     case 'roll':
       console.log(`Arg 0: ${args[0]} Arg 1: ${args[1]}`)
